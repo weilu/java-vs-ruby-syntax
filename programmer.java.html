@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/workspace/gist/programmer.java.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v12">
+<meta name="syntax" content="java">
+<meta name="settings" content="number_lines,use_css,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="solarized">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #839496; background-color: #002b36; }
+body { font-family: monospace; color: #839496; background-color: #002b36; }
+* { font-size: 1em; }
+.Constant { color: #2aa198; }
+.Statement { color: #719e07; }
+.LineNr { color: #586e75; background-color: #073642; padding-bottom: 1px; }
+.PreProc { color: #cb4b16; }
+.Type { color: #b58900; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="LineNr"> 1 </span><span class="PreProc">import</span> java.util.*;
+<span class="LineNr"> 2 </span>
+<span class="LineNr"> 3 </span><span class="Type">class</span> Programmer {
+<span class="LineNr"> 4 </span>  <span class="Type">private</span> String name;
+<span class="LineNr"> 5 </span>  <span class="Type">private</span> <span class="Type">int</span> age;
+<span class="LineNr"> 6 </span>  <span class="Type">private</span> List&lt;String&gt; languages;
+<span class="LineNr"> 7 </span>
+<span class="LineNr"> 8 </span>  <span class="Type">public</span> Programmer(String name) {
+<span class="LineNr"> 9 </span>    <span class="Type">this</span>.name = name;
+<span class="LineNr">10 </span>    <span class="Type">this</span>.languages = <span class="Statement">new</span> ArrayList&lt;String&gt;();
+<span class="LineNr">11 </span>  }
+<span class="LineNr">12 </span>
+<span class="LineNr">13 </span>  <span class="Type">public</span> <span class="Type">void</span> addLanguage(String languages) {
+<span class="LineNr">14 </span>    <span class="Type">this</span>.languages.add(languages);
+<span class="LineNr">15 </span>  }
+<span class="LineNr">16 </span>
+<span class="LineNr">17 </span>  <span class="Type">public</span> List&lt;String&gt; getLanguages() {
+<span class="LineNr">18 </span>    <span class="Statement">return</span> languages;
+<span class="LineNr">19 </span>  }
+<span class="LineNr">20 </span>
+<span class="LineNr">21 </span>  <span class="Type">public</span> String getName() {
+<span class="LineNr">22 </span>    <span class="Statement">return</span> name;
+<span class="LineNr">23 </span>  }
+<span class="LineNr">24 </span>
+<span class="LineNr">25 </span>  <span class="Type">public</span> <span class="Type">void</span> setAge(<span class="Type">int</span> age) {
+<span class="LineNr">26 </span>    <span class="Type">this</span>.age = age;
+<span class="LineNr">27 </span>  }
+<span class="LineNr">28 </span>
+<span class="LineNr">29 </span>  <span class="Type">public</span> <span class="Type">int</span> getAge() {
+<span class="LineNr">30 </span>    <span class="Statement">return</span> age;
+<span class="LineNr">31 </span>  }
+<span class="LineNr">32 </span>
+<span class="LineNr">33 </span>  <span class="Type">public</span> String toString() {
+<span class="LineNr">34 </span>    <span class="Statement">return</span> <span class="Constant">&quot;A programmer named &quot;</span> + name + <span class="Constant">&quot;, age &quot;</span> + age + <span class="Constant">&quot;, knows &quot;</span> + languagesString();
+<span class="LineNr">35 </span>  }
+<span class="LineNr">36 </span>
+<span class="LineNr">37 </span>  <span class="Type">private</span> String languagesString() {
+<span class="LineNr">38 </span>    <span class="Statement">return</span> Arrays.toString(languages.toArray());
+<span class="LineNr">39 </span>  }
+<span class="LineNr">40 </span>
+<span class="LineNr">41 </span>  <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) {
+<span class="LineNr">42 </span>    Programmer alice = <span class="Statement">new</span> Programmer(<span class="Constant">&quot;Alice&quot;</span>);
+<span class="LineNr">43 </span>    alice.setAge(<span class="Constant">8</span>);
+<span class="LineNr">44 </span>    String[] languages = { <span class="Constant">&quot;Java&quot;</span>, <span class="Constant">&quot;Ruby&quot;</span>, <span class="Constant">&quot;Python&quot;</span> };
+<span class="LineNr">45 </span>
+<span class="LineNr">46 </span>    <span class="Statement">for</span>(<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; languages.length; i++) {
+<span class="LineNr">47 </span>      alice.addLanguage(languages[i]);
+<span class="LineNr">48 </span>    }
+<span class="LineNr">49 </span>    System.out.println(alice);
+<span class="LineNr">50 </span>  }
+<span class="LineNr">51 </span>}
+<span class="LineNr">52 </span>
+</pre>
+</body>
+</html>

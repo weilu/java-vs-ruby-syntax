@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/workspace/gist/programmer.rb.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v12">
+<meta name="syntax" content="ruby">
+<meta name="settings" content="number_lines,use_css,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="solarized">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #839496; background-color: #002b36; }
+body { font-family: monospace; color: #839496; background-color: #002b36; }
+* { font-size: 1em; }
+.Statement { color: #719e07; }
+.Type { color: #b58900; }
+.rubyDefine { color: #93a1a1; background-color: #002b36; padding-bottom: 1px; font-weight: bold; }
+.LineNr { color: #586e75; background-color: #073642; padding-bottom: 1px; }
+.Comment { color: #586e75; font-style: italic; }
+.Constant { color: #2aa198; }
+.Special { color: #dc322f; }
+.Identifier { color: #268bd2; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="LineNr"> 1 </span><span class="rubyDefine">class</span> <span class="Type">Programmer</span>                      <span class="Comment"># No braces, use `end` instead</span>
+<span class="LineNr"> 2 </span>  <span class="Statement">attr_accessor</span> <span class="Constant">:age</span>                  <span class="Comment"># Symbol, Getter+Setter</span>
+<span class="LineNr"> 3 </span>  <span class="Statement">attr_reader</span> <span class="Constant">:name</span>, <span class="Constant">:languages</span>       <span class="Comment"># Getters</span>
+<span class="LineNr"> 4 </span>
+<span class="LineNr"> 5 </span>  <span class="rubyDefine">def</span> <span class="Identifier">initialize</span> name                 <span class="Comment"># Define method, Constructor, Optional parentheses</span>
+<span class="LineNr"> 6 </span>    <span class="Identifier">@name</span> = name                      <span class="Comment"># Instance variable</span>
+<span class="LineNr"> 7 </span>    <span class="Identifier">@languages</span> = []                   <span class="Comment"># Array</span>
+<span class="LineNr"> 8 </span>  <span class="rubyDefine">end</span>
+<span class="LineNr"> 9 </span>
+<span class="LineNr">10 </span>  <span class="rubyDefine">def</span> <span class="Identifier">to_s</span>                            <span class="Comment"># toString, No return data type</span>
+<span class="LineNr">11 </span>    <span class="Special">&quot;</span><span class="Constant">A programmer named </span><span class="Special">#{</span>name<span class="Special">}</span><span class="Constant">, age </span><span class="Special">#{</span>age<span class="Special">}</span><span class="Constant">, knows </span><span class="Special">#{</span>languages_string<span class="Special">}</span><span class="Special">&quot;</span>
+<span class="LineNr">12 </span>  <span class="rubyDefine">end</span>                                 <span class="Comment"># String interpolation, Optional parentheses</span>
+<span class="LineNr">13 </span>
+<span class="LineNr">14 </span>  <span class="Statement">private</span>
+<span class="LineNr">15 </span>
+<span class="LineNr">16 </span>  <span class="rubyDefine">def</span> <span class="Identifier">languages_string</span>
+<span class="LineNr">17 </span>    languages.join(<span class="Special">&quot;</span><span class="Constant">, </span><span class="Special">&quot;</span>)              <span class="Comment"># Implicit return</span>
+<span class="LineNr">18 </span>  <span class="rubyDefine">end</span>
+<span class="LineNr">19 </span><span class="rubyDefine">end</span>
+<span class="LineNr">20 </span>
+<span class="LineNr">21 </span>alice = <span class="Type">Programmer</span>.new(<span class="Special">'</span><span class="Constant">Alice</span><span class="Special">'</span>)       <span class="Comment"># Object initialization</span>
+<span class="LineNr">22 </span>alice.age = <span class="Constant">8</span>                         <span class="Comment"># Invoking method age=</span>
+<span class="LineNr">23 </span>
+<span class="LineNr">24 </span>languages = [<span class="Special">'</span><span class="Constant">Java</span><span class="Special">'</span>, <span class="Special">'</span><span class="Constant">Ruby</span><span class="Special">'</span>, <span class="Special">'</span><span class="Constant">Python</span><span class="Special">'</span>]<span class="Comment"># Array</span>
+<span class="LineNr">25 </span>languages.each <span class="Statement">do</span> |<span class="Identifier">language</span>|          <span class="Comment"># Iterate over an array</span>
+<span class="LineNr">26 </span>  alice.languages &lt;&lt; language         <span class="Comment"># invoking Array#&lt;&lt; method</span>
+<span class="LineNr">27 </span><span class="Statement">end</span>
+<span class="LineNr">28 </span>
+<span class="LineNr">29 </span>puts alice                            <span class="Comment"># Output</span>
+<span class="LineNr">30 </span>
+</pre>
+</body>
+</html>
