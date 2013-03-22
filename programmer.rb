@@ -1,10 +1,14 @@
 class Programmer                      # No braces, use `end` instead
   attr_accessor :age                  # Symbol, Getter+Setter
-  attr_reader :name, :languages       # Getters
+  attr_reader :name                   # Getter
 
   def initialize name                 # Define method, Constructor, Optional parentheses
     @name = name                      # Instance variable
     @languages = []                   # Array
+  end
+
+  def learn language
+    @languages << language            # invoking method array<<
   end
 
   def to_s                            # toString, No return data type
@@ -14,7 +18,7 @@ class Programmer                      # No braces, use `end` instead
   private
 
   def languages_string
-    languages.join(", ")              # Implicit return
+    @languages.join(", ")             # Implicit return
   end
 end
 
@@ -23,7 +27,7 @@ alice.age = 8                         # Invoking method age=
 
 languages = %w{Java Ruby Python}      # Alternative array instantiation with perl % syntax
 languages.each do |language|          # Iterate over an array
-  alice.languages << language         # invoking Array#<< method
+  alice.learn language
 end
 
 puts alice                            # Output

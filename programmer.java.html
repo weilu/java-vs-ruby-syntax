@@ -35,48 +35,44 @@ body { font-family: monospace; color: #839496; background-color: #002b36; }
 <span class="LineNr">10 </span>    <span class="Type">this</span>.languages = <span class="Statement">new</span> ArrayList&lt;String&gt;();
 <span class="LineNr">11 </span>  }
 <span class="LineNr">12 </span>
-<span class="LineNr">13 </span>  <span class="Type">public</span> <span class="Type">void</span> addLanguage(String languages) {
+<span class="LineNr">13 </span>  <span class="Type">public</span> <span class="Type">void</span> learn(String languages) {
 <span class="LineNr">14 </span>    <span class="Type">this</span>.languages.add(languages);
 <span class="LineNr">15 </span>  }
 <span class="LineNr">16 </span>
-<span class="LineNr">17 </span>  <span class="Type">public</span> List&lt;String&gt; getLanguages() {
-<span class="LineNr">18 </span>    <span class="Statement">return</span> languages;
+<span class="LineNr">17 </span>  <span class="Type">public</span> String getName() {
+<span class="LineNr">18 </span>    <span class="Statement">return</span> name;
 <span class="LineNr">19 </span>  }
 <span class="LineNr">20 </span>
-<span class="LineNr">21 </span>  <span class="Type">public</span> String getName() {
-<span class="LineNr">22 </span>    <span class="Statement">return</span> name;
+<span class="LineNr">21 </span>  <span class="Type">public</span> <span class="Type">void</span> setAge(<span class="Type">int</span> age) {
+<span class="LineNr">22 </span>    <span class="Type">this</span>.age = age;
 <span class="LineNr">23 </span>  }
 <span class="LineNr">24 </span>
-<span class="LineNr">25 </span>  <span class="Type">public</span> <span class="Type">void</span> setAge(<span class="Type">int</span> age) {
-<span class="LineNr">26 </span>    <span class="Type">this</span>.age = age;
+<span class="LineNr">25 </span>  <span class="Type">public</span> <span class="Type">int</span> getAge() {
+<span class="LineNr">26 </span>    <span class="Statement">return</span> age;
 <span class="LineNr">27 </span>  }
 <span class="LineNr">28 </span>
-<span class="LineNr">29 </span>  <span class="Type">public</span> <span class="Type">int</span> getAge() {
-<span class="LineNr">30 </span>    <span class="Statement">return</span> age;
-<span class="LineNr">31 </span>  }
-<span class="LineNr">32 </span>
-<span class="LineNr">33 </span>  <span class="Type">public</span> String toString() {
-<span class="LineNr">34 </span>    <span class="Statement">return</span> <span class="Constant">&quot;A programmer named &quot;</span> + name
-<span class="LineNr">35 </span>      + <span class="Constant">&quot;, &quot;</span> + age + <span class="Constant">&quot; years old, knows &quot;</span> + languagesString() + <span class="Constant">&quot;.&quot;</span>;
-<span class="LineNr">36 </span>  }
-<span class="LineNr">37 </span>
-<span class="LineNr">38 </span>  <span class="Type">private</span> String languagesString() {
-<span class="LineNr">39 </span>    String result = Arrays.toString(languages.toArray());
-<span class="LineNr">40 </span>    <span class="Statement">return</span> result.substring(<span class="Constant">1</span>, result.length() - <span class="Constant">1</span>);
-<span class="LineNr">41 </span>  }
-<span class="LineNr">42 </span>
-<span class="LineNr">43 </span>  <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) {
-<span class="LineNr">44 </span>    Programmer alice = <span class="Statement">new</span> Programmer(<span class="Constant">&quot;Alice&quot;</span>);
-<span class="LineNr">45 </span>    alice.setAge(<span class="Constant">8</span>);
-<span class="LineNr">46 </span>    String[] languages = { <span class="Constant">&quot;Java&quot;</span>, <span class="Constant">&quot;Ruby&quot;</span>, <span class="Constant">&quot;Python&quot;</span> };
-<span class="LineNr">47 </span>
-<span class="LineNr">48 </span>    <span class="Statement">for</span>(<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; languages.length; i++) {
-<span class="LineNr">49 </span>      alice.addLanguage(languages[i]);
-<span class="LineNr">50 </span>    }
-<span class="LineNr">51 </span>    System.out.println(alice);
-<span class="LineNr">52 </span>  }
-<span class="LineNr">53 </span>}
-<span class="LineNr">54 </span>
+<span class="LineNr">29 </span>  <span class="Type">public</span> String toString() {
+<span class="LineNr">30 </span>    <span class="Statement">return</span> <span class="Constant">&quot;A programmer named &quot;</span> + name
+<span class="LineNr">31 </span>      + <span class="Constant">&quot;, &quot;</span> + age + <span class="Constant">&quot; years old, knows &quot;</span> + languagesString() + <span class="Constant">&quot;.&quot;</span>;
+<span class="LineNr">32 </span>  }
+<span class="LineNr">33 </span>
+<span class="LineNr">34 </span>  <span class="Type">private</span> String languagesString() {
+<span class="LineNr">35 </span>    String result = Arrays.toString(languages.toArray());
+<span class="LineNr">36 </span>    <span class="Statement">return</span> result.substring(<span class="Constant">1</span>, result.length() - <span class="Constant">1</span>);
+<span class="LineNr">37 </span>  }
+<span class="LineNr">38 </span>
+<span class="LineNr">39 </span>  <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) {
+<span class="LineNr">40 </span>    Programmer alice = <span class="Statement">new</span> Programmer(<span class="Constant">&quot;Alice&quot;</span>);
+<span class="LineNr">41 </span>    alice.setAge(<span class="Constant">8</span>);
+<span class="LineNr">42 </span>    String[] languages = { <span class="Constant">&quot;Java&quot;</span>, <span class="Constant">&quot;Ruby&quot;</span>, <span class="Constant">&quot;Python&quot;</span> };
+<span class="LineNr">43 </span>
+<span class="LineNr">44 </span>    <span class="Statement">for</span>(<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; languages.length; i++) {
+<span class="LineNr">45 </span>      alice.learn(languages[i]);
+<span class="LineNr">46 </span>    }
+<span class="LineNr">47 </span>    System.out.println(alice);
+<span class="LineNr">48 </span>  }
+<span class="LineNr">49 </span>}
+<span class="LineNr">50 </span>
 </pre>
 </body>
 </html>

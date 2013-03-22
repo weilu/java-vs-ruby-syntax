@@ -10,12 +10,8 @@ class Programmer {
     this.languages = new ArrayList<String>();
   }
 
-  public void addLanguage(String languages) {
+  public void learn(String languages) {
     this.languages.add(languages);
-  }
-
-  public List<String> getLanguages() {
-    return languages;
   }
 
   public String getName() {
@@ -46,7 +42,7 @@ class Programmer {
     String[] languages = { "Java", "Ruby", "Python" };
 
     for(int i = 0; i < languages.length; i++) {
-      alice.addLanguage(languages[i]);
+      alice.learn(languages[i]);
     }
     System.out.println(alice);
   }
