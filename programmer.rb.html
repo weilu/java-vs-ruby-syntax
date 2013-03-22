@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/workspace/gist/programmer.rb.html</title>
+<title>~/workspace/java-vs-ruby-syntax/programmer.rb.html</title>
 <meta name="Generator" content="Vim/7.3">
 <meta name="plugin-version" content="vim7.3_v12">
 <meta name="syntax" content="ruby">
@@ -15,10 +15,10 @@ body { font-family: monospace; color: #839496; background-color: #002b36; }
 * { font-size: 1em; }
 .Statement { color: #719e07; }
 .Type { color: #b58900; }
-.rubyDefine { color: #93a1a1; background-color: #002b36; padding-bottom: 1px; font-weight: bold; }
-.LineNr { color: #586e75; background-color: #073642; padding-bottom: 1px; }
 .Comment { color: #586e75; font-style: italic; }
+.rubyDefine { color: #93a1a1; background-color: #002b36; padding-bottom: 1px; font-weight: bold; }
 .Constant { color: #2aa198; }
+.LineNr { color: #586e75; background-color: #073642; padding-bottom: 1px; }
 .Special { color: #dc322f; }
 .Identifier { color: #268bd2; }
 -->
@@ -36,7 +36,7 @@ body { font-family: monospace; color: #839496; background-color: #002b36; }
 <span class="LineNr"> 8 </span>  <span class="rubyDefine">end</span>
 <span class="LineNr"> 9 </span>
 <span class="LineNr">10 </span>  <span class="rubyDefine">def</span> <span class="Identifier">to_s</span>                            <span class="Comment"># toString, No return data type</span>
-<span class="LineNr">11 </span>    <span class="Special">&quot;</span><span class="Constant">A programmer named </span><span class="Special">#{</span>name<span class="Special">}</span><span class="Constant">, age </span><span class="Special">#{</span>age<span class="Special">}</span><span class="Constant">, knows </span><span class="Special">#{</span>languages_string<span class="Special">}</span><span class="Special">&quot;</span>
+<span class="LineNr">11 </span>    <span class="Special">&quot;</span><span class="Constant">A programmer named </span><span class="Special">#{</span>name<span class="Special">}</span><span class="Constant">, </span><span class="Special">#{</span>age<span class="Special">}</span><span class="Constant"> years old, knows </span><span class="Special">#{</span>languages_string<span class="Special">}</span><span class="Constant">.</span><span class="Special">&quot;</span>
 <span class="LineNr">12 </span>  <span class="rubyDefine">end</span>                                 <span class="Comment"># String interpolation, Optional parentheses</span>
 <span class="LineNr">13 </span>
 <span class="LineNr">14 </span>  <span class="Statement">private</span>
