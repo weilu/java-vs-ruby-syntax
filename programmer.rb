@@ -21,7 +21,7 @@ end
 alice = Programmer.new('Alice')       # Object initialization
 alice.age = 8                         # Invoking method age=
 
-languages = ['Java', 'Ruby', 'Python']# Array
+languages = %w{Java Ruby Python}      # Alternative array instantiation with perl % syntax
 languages.each do |language|          # Iterate over an array
   alice.languages << language         # invoking Array#<< method
 end
