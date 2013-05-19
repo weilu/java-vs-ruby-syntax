@@ -1,0 +1,24 @@
+div.shell {
+  width: auto;
+}
+
+section#downloads, div#no-downloads, footer {
+  background: none;
+}
+
+section#main_content {
+  width: 97%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 25px 0;
+}
+
+.half {
+  width: 49.6%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.half h2 {
+  text-align: center
+}
